@@ -9,7 +9,7 @@ api_hash = os.environ["api_hash"]
 SOURCE_CHANNEL = int(os.environ["source_channel"])
 DEST_CHANNEL = int(os.environ["dest_channel"])
 
-client = TelegramClient("session", api_id, api_hash)
+client = TelegramClient("session_name", api_id, api_hash)
 
 async def main():
     async for msg in client.iter_messages(SOURCE_CHANNEL, limit=100):
